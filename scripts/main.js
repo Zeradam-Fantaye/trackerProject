@@ -1,3 +1,30 @@
+// Add an event handler Which handles the submit event from our <form>
+document.getElementById("issueInputForm").addEventListener("submit", saveIssue);
+
+function saveIssue(e){
+	var issueDesc = document.getElementById("issueDescInput").value;
+	var issueSeverity = document.getElementById("issueSeverityInput").value;
+	var issueAssignedTo = document.getElementById("issueAssignedToInput").value;
+	var issueId = chance.guid();//To generate a global unique identifier for that new ID
+	var issueStatus = "Open";
+
+	var issue = {
+		id: issueId,
+		description: issueDesc,
+		severity: issueSeverity,
+		assignedTo: issueAssignedTo,
+		status: issueStatus
+	}
+
+	if (localStorage.getItem("issues") == null){
+		var issues = [];
+		issues.push(issue);
+		localStorage
+	}
+}
+
+
+
 function fetchIssues(){
 	//fetching issues for a local storage
 	var issues = JSON.parse(localStorage.getItem("issues"));
