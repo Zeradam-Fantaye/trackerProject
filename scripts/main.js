@@ -1,7 +1,7 @@
 // Add an event handler Which handles the submit event from our <form>
-/*document.getElementById("issueInputForm").addEventListener("submit", saveIssue);
+document.getElementById("issueInputForm").addEventListener("submit", saveIssue);
 
-function saveIssue(e) {
+/*function saveIssue(e) {
   var issueDesc = document.getElementById('issueDescInput').value;
   var issueSeverity = document.getElementById('issueSeverityInput').value;
   var issueAssignedTo = document.getElementById('issueAssignedToInput').value;
